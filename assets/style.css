@@ -14,7 +14,7 @@ body {
 	top:3%;
 	left: 1%;
 	font-size: 300%;
-	z-index: 2;
+	z-index: 3;
 }
 
 #header {
@@ -27,7 +27,7 @@ body {
 	background-color: rgba(255, 255, 255, 0.75);
 	height: 6em;
 	width: 150px;
-	z-index: 2;
+	z-index: 3;
 }
 
 .title {
