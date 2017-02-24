@@ -456,6 +456,7 @@ $(document).ready(function(){
     $(".marker").click(function() {
         
         $("#chooseMarker").hide();
+        $("#main-title").hide();
 
         //get data on human player/ai player
         humanPlayer = $(this).attr("data-marker");
@@ -468,7 +469,7 @@ $(document).ready(function(){
         //start game
         game = new Game();
         game.start();
-        $("#players").show();
+        
     });
 
 
@@ -481,6 +482,7 @@ $(document).ready(function(){
         $(".gameMarkers").remove();
         $(".cell").text('').removeClass('occupied').removeClass("winning");
         $("#chooseMarker").show();
+        $("#main-title").show();
         game = {};
 
     });

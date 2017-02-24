@@ -3,9 +3,10 @@ html {
 }
 
 body {
-	height: 100%;
+	height: 100vh;
 	position: relative;
 	background-color: rgba(200, 200, 200, 0.6); 
+	font-family: 'Padauk', sans-serif;
 }
 
 #hamburger {
@@ -21,7 +22,7 @@ body {
 	position: absolute;
 	top:3%;
 	left:1%;
-	border: 10px solid white;
+	border: 10px solid rgba(17, 106, 15, 0.3);
 	border-radius: 10px;
 	background-color: rgba(255, 255, 255, 0.75);
 	height: 6em;
@@ -29,7 +30,7 @@ body {
 	z-index: 2;
 }
 
-#title {
+.title {
 	font-style: bold;
 	font-size: 137.5%;
 	text-decoration: underline;
@@ -60,7 +61,7 @@ body {
 .cell {
 	box-sizing: border-box;
 	float: left;
-
+	font-family: 'Rock Salt', cursive;
 	text-align: center;
 	vertical-align: center;
 
@@ -74,10 +75,24 @@ body {
 	background-color: rgba(150, 150, 220, 0.7);
 }
 
-#chooseMarker, #results {
-	background-color: white;
+#main-title {
 	position: absolute;
-	top: 5px;
+	top: 15%;
+	width: 80%;
+	left: 10%;
+	text-align: center;
+	font-family: 'Barrio', cursive;
+	font-weight: bold;
+	font-size: 600%;
+	color: white;
+	text-shadow: 1px 1px 5px black, 5px 5px 1px green, 6px 6px 5px black, 10px 10px 1px red, 11px 11px 5px black;
+	z-index: 2;
+}
+
+#chooseMarker, #results {
+	/*background-color: white;*/
+	position: absolute;
+	top: 35%;
 	width: 60%;
 	left: 20%;
 	text-align: center;
@@ -86,15 +101,23 @@ body {
 	border: 5px solid black;
 	border-radius: 30px;
 	box-sizing: border-box;
-	box-shadow: 0 0 10px white, 0 0 50px rgba(50, 50, 50, 0.50);
-	height: 120px;
+	box-shadow: 0 0 10px white, 0 0 50px rgba(0, 0, 0, 0.50);
+	height: 25vh;
+	background-image: radial-gradient(ellipse, rgba(17, 106, 15, 1) 0%, rgba(17, 106, 15, 1) 50%, rgba(164, 20, 15, 1) 100%);
+	color: white;
 }
 
 #results {
 	display: none;
+	padding-top: 2vh;
 	width: 60%;
 	font-size: 200%;
-	box-shadow: 0 0 10px white, 0 0 200px rgba(50, 50, 50, 0.50);
+	box-shadow: 0 0 10px white, 0 0 100px rgba(0, 0, 0, 0.50);
+}
+
+h2 {
+	margin-top: 1vh;
+	font-size: 135%;
 }
 
 .marker {
@@ -103,11 +126,11 @@ body {
 	width: 7%;
 	border: 1px solid black;
 	border-radius: 5px;
-	font-size: 135%;
+	font-size: 112.5%;
+	font-family: 'Rock Salt', cursive;
 }
 
 #players {
-	display: none;
 	box-sizing: border-box;
 	position: absolute;
 	top: 50px;
@@ -150,10 +173,47 @@ body {
 	margin-top: 5%;
 	font-size: 150%;
 	font-weight: bold;
+	font-family: 'Rock Salt', cursive;
 }
 
 section {
 	clear: both;
+}
+
+@media screen and (max-width: 768px) {
+	#chooseMarker, #start, #results {
+		width: 80%;
+		left: 10%;
+		font-size: 150%;
+		height: 30vh;
+	}
+
+	#main-title {
+		width: 100%;
+		left: 0%;
+		font-size: 500%;
+	}
+
+	.marker {
+		width: 15%;
+	}
+
+	#players {
+		top: 75px;
+		left: 20%;
+		width: 60%;
+	}
+
+	.player {
+		width: 30%;
+	}
+
+	.board {
+		top: 150px;
+		left: 10%;
+		width: 80%;
+	}
+
 }
 
 @media screen and (max-width: 640px) {
@@ -161,6 +221,24 @@ section {
 		width: 100%;
 		left: 0;
 		font-size: 150%;
+	}
+
+	#main-title {
+		width: 100%;
+		left: 0%;
+		font-size: 400%;
+	}
+
+	.marker {
+		width: 15%;
+	}
+
+	#players {
+		width: 70%;
+	}
+
+	.player {
+		width: 30%;
 	}
 
 	.board {
