@@ -1,0 +1,171 @@
+html {
+	min-height: 100%
+}
+
+body {
+	height: 100%;
+	position: relative;
+	background-color: rgba(200, 200, 200, 0.6); 
+}
+
+#hamburger {
+	position: absolute;
+	top:3%;
+	left: 1%;
+	font-size: 300%;
+	z-index: 2;
+}
+
+#header {
+	display:none;
+	position: absolute;
+	top:3%;
+	left:1%;
+	border: 10px solid white;
+	border-radius: 10px;
+	background-color: rgba(255, 255, 255, 0.75);
+	height: 6em;
+	width: 150px;
+	z-index: 2;
+}
+
+#title {
+	font-style: bold;
+	font-size: 137.5%;
+	text-decoration: underline;
+}
+
+#info div {
+	padding: 2% 0 2% 0;
+}
+
+#header a {
+	color: black;
+}
+
+.board {
+	box-sizing: border-box;
+	position: absolute;
+	top: 125px;
+	width: 45%;
+	left: 27.5%;
+
+}
+
+.row {
+	width: 100%;
+	height: 100px;
+}
+
+.cell {
+	box-sizing: border-box;
+	float: left;
+
+	text-align: center;
+	vertical-align: center;
+
+	padding: 5%;
+	border: 3px solid black;
+	
+	width: 33%;
+	height: 100px;
+	font-size: 300%;
+	font-weight: bold;
+	background-color: rgba(150, 150, 220, 0.7);
+}
+
+#chooseMarker, #results {
+	background-color: white;
+	position: absolute;
+	top: 5px;
+	width: 60%;
+	left: 20%;
+	text-align: center;
+	font-size: 135%;
+	z-index: 2;
+	border: 5px solid black;
+	border-radius: 30px;
+	box-sizing: border-box;
+	box-shadow: 0 0 10px white, 0 0 50px rgba(50, 50, 50, 0.50);
+	height: 120px;
+}
+
+#results {
+	display: none;
+	width: 60%;
+	font-size: 200%;
+	box-shadow: 0 0 10px white, 0 0 200px rgba(50, 50, 50, 0.50);
+}
+
+.marker {
+	display: inline-block;
+	margin: 2.5%;
+	width: 7%;
+	border: 1px solid black;
+	border-radius: 5px;
+	font-size: 135%;
+}
+
+#players {
+	display: none;
+	box-sizing: border-box;
+	position: absolute;
+	top: 50px;
+	width: 45%;
+	left: 27.5%;
+}
+
+.player {
+	width: 20%;
+	height: 75px;
+	border-top: 3px solid black;
+	border-right: 3px solid black;
+	border-left: 3px solid black;
+	box-sizing: border-box;
+	border-top-right-radius: 20px;
+	border-top-left-radius: 20px;
+	text-align: center;
+	font-size: 135%;
+
+}
+
+#human {
+	margin-left: 5%;
+	float: left;
+	background-color: rgba(17, 106, 15, 0.3);
+}
+
+#ai {
+	margin-right: 5%;
+	float:right;
+	background-color: rgba(164, 20, 15, 0.3);
+}
+
+.winning {
+	background-color: rgba(17, 106, 15, 0.3);
+}
+
+.gameMarkers {
+	text-decoration: blink;
+	margin-top: 5%;
+	font-size: 150%;
+	font-weight: bold;
+}
+
+section {
+	clear: both;
+}
+
+@media screen and (max-width: 640px) {
+	#chooseMarker, #start, #results {
+		width: 100%;
+		left: 0;
+		font-size: 150%;
+	}
+
+	.board {
+		top: 150px;
+		left: 0;
+		width: 100%;
+	}
+}

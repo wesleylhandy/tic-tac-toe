@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>Tic-Tac-Toe</title>
+
+	<link rel="stylesheet" type="text/css" href="assets/reset.css">
+	<!--jQuery-->
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+	
+	<!--Font Awesome-->
+    <script src="https://use.fontawesome.com/5f1f3cb4d3.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="assets/style.css">
+
+</head>
+<body>
+
+<div id="hamburger"><i class="fa fa-bars" aria-hidden="true"></i></div>
+<header id="header">
+	<center>
+		<div id="title">Tic-Tac-Toe</div>
+		<div id='info'>
+			<div>coded with <i class="fa fa-coffee" aria-hidden="true"></i></div>
+			<div>by <a href="https://github.com/wesleylhandy/minimax" target = '_blank'>wesley l. handy</a></div>
+			<div><i class="fa fa-copyright" aria-hidden="true"></i><span id="year"></span></div>
+		</div>
+	</center>
+</header>
+
+<main id = "container">
+
+	<div id = "chooseMarker">
+
+		<h3>Choose Your Marker for Playing Tic-Tac-Toe:</h3>
+
+		<button class = "marker" data-marker="X" data-ai="O">X</button>
+
+		<button class = "marker" data-marker="O" data-ai="X">O</button>
+
+	</div>
+
+
+	<div id="players">
+		<div class = 'player' id = "human">Human</div>
+		<div class = 'player' id = "ai">AI</div>
+	</div>
+
+	<div id='results'></div>
+
+	<section id = "game-container">
+
+		<div class = 'board'>
+           
+            <div class = 'row'>
+	            <div class='cell' data-index = "0" ></div>
+	            <div class='cell' data-index = "1" ></div>
+	            <div class='cell' data-index = "2" ></div>
+            </div>
+            <div class = 'row'>
+	            <div class='cell' data-index = "3" ></div>
+	            <div class='cell' data-index = "4" ></div>
+	            <div class='cell' data-index = "5" ></div>
+            </div>
+            <div class = 'row'>
+	            <div class='cell' data-index = "6" ></div>
+	            <div class='cell' data-index = "7" ></div>
+	            <div class='cell' data-index = "8" ></div>
+            </div>
+        </div>
+
+
+	</section>
+
+</main>
+
+</body>
+	<script type="text/javascript" src="assets/minimax.js"></script>
+</html>
