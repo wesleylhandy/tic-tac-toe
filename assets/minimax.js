@@ -490,6 +490,7 @@ $(document).ready(function(){
     $(".cell").click(function() {
         var $this = $(this);
         if(game.status === "running" && game.currentState.turn === humanPlayer && !$this.hasClass('occupied')) {
+            firstMove = false;
             var index = parseInt($this.data("index"));
 
             var next = new State(game.currentState);
@@ -500,7 +501,7 @@ $(document).ready(function(){
             next.advanceTurn();
 
             game.advanceTo(next);
-            firstMove = false;
+            
         }
     });
 
