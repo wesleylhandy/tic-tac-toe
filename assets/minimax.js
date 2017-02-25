@@ -209,7 +209,7 @@ var Game = function() {
                     break;
             }
 
-            $("#result").text(resultText);
+            $("#result").show().text(resultText);
             function showComments() {
                 $("#result").hide();
                 $("#comments").show().html(commentText).children("p:last-child").css("text-decoration", "underline");
