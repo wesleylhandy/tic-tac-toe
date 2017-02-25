@@ -484,12 +484,12 @@ $(document).ready(function(){
     });
 
 
-    $("#results").on("click", function() {
+    $("#comments").on("click", function() {
 
         //reset board
         gameOver = false; 
         firstMove = true;
-        $("#results").hide();
+        $("#comments").hide();
         $(".gameMarkers").remove();
         $(".cell").text('').removeClass('occupied').removeClass("winning");
         $("#chooseMarker").show();
