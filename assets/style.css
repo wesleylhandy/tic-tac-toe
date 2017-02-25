@@ -75,7 +75,7 @@ body {
 	background-color: rgba(150, 150, 220, 0.7);
 }
 
-#main-title {
+#main-title, #result {
 	position: absolute;
 	top: 15%;
 	width: 80%;
@@ -89,7 +89,11 @@ body {
 	z-index: 2;
 }
 
-#chooseMarker, #results {
+#result {
+	top: 35%;
+}
+
+#chooseMarker, #comments {
 	/*background-color: white;*/
 	position: absolute;
 	top: 35%;
@@ -107,7 +111,7 @@ body {
 	color: white;
 }
 
-#results {
+#comments {
 	display: none;
 	padding-top: 2vh;
 	width: 60%;
@@ -181,7 +185,7 @@ section {
 }
 
 @media screen and (max-width: 768px) {
-	#chooseMarker, #start, #results {
+	#chooseMarker, #start, #comments {
 		width: 80%;
 		left: 10%;
 		font-size: 150%;
@@ -217,7 +221,7 @@ section {
 }
 
 @media screen and (max-width: 640px) {
-	#chooseMarker, #start, #results {
+	#chooseMarker, #start, #comments {
 		width: 100%;
 		left: 0;
 		font-size: 150%;

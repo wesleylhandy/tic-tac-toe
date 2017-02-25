@@ -180,31 +180,42 @@ var Game = function() {
         if(_state.isTerminal()) {
             _state.status = "ended";
             gameOver = true;
-            var resultText;
+            var commentText, resultText;
             switch (_state.result) {
                                
                 case "X-won":
                     if (humanPlayer=="X") {
-                        resultText = `<p>Congrats you beat the computer, there must be an error.</p><p>Click Here to Play Again</p>`;
+                        commentText = `<p>Congrats you beat the computer, there must be an error.</p><p>Click Here to Play Again</p>`;
+                        resultText = "WIN";
                     } else {
-                        resultText= `<p>Who did you think was going to win? . . . Of course, the AI!</p><p>Click Here to Play Again</p>`;
+                        commentText= `<p>Who did you think was going to win? . . . Of course, the AI!</p><p>Click Here to Play Again</p>`;
+                        resultText = "LOSE";
                     }
                     ui.highlightWin(_state.winningIndices, "X");
                     break;             
                 case "O-won":
                     if (humanPlayer=="O") {
-                            resultText = `<p>Congrats you beat the computer, there must be an error.</p><p>Click Here to Play Again</p>`;
+                            commentText = `<p>Congrats you beat the computer, there must be an error.</p><p>Click Here to Play Again</p>`;
+                            resultText = "WIN";
                     } else {
-                        resultText= `<p>Who did you think was going to win? . . . Of course, the AI!</p><p>Click Here to Play Again</p>`;
+                        commentText= `<p>Who did you think was going to win? . . . Of course, the AI!</p><p>Click Here to Play Again</p>`;
+                        resultText = "LOSE";
                     }
                     ui.highlightWin(_state.winningIndices, "O");
                     break;
                 case "draw" :
-                    resultText = `<p>Congrats, this is the best you could have done against me! LOL!!! Well-done.</p><p>Click Here to Play Again</p>`;
+                    commentText = `<p>Congrats, this is the best you could have done against me! LOL!!! Well-done.</p><p>Click Here to Play Again</p>`;
+                    resultText = "DRAW";
                     break;
             }
-            $("#results").show().html(resultText).children("p:last-child").css("text-decoration", "underline");
-            $("#start-button").text("Play Again?");
+
+            $("#result").text(resultText);
+            function showComments() {
+                $("#result").hide();
+                $("#comments").show().html(commentText).children("p:last-child").css("text-decoration", "underline");
+            }
+            
+            delay = setTimeout(showComments, 1500);
         }
         else {
             //the game is still running
